@@ -8,7 +8,7 @@ type Parser = Parsec Void String
 
 mulParser :: Parser Integer
 mulParser = do
-  _ <- many (noneOf "muldo'()")
+  _ <- many (noneOf "mul()")
   _ <- string "mul("
   firstNum <- some digitChar
   _ <- char ','
